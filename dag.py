@@ -4,7 +4,7 @@ from airflow.operators.dummy_operator import DummyOperator
 from cloudera.cdp.airflow.operators.cde_operator import CDEJobRunOperator
 
 ####### CHANGE THIS ##########
-PREFIX = 'your_username'
+PREFIX = 'yourprefix'
 ##############################
 
 
