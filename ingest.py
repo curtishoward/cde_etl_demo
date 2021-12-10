@@ -98,9 +98,9 @@ geo_data      = spark.read.csv(s3BucketPath + "/postal_codes.csv",        header
 #       SQL CLEANUP: DATABASES, TABLES, VIEWS
 #---------------------------------------------------
 print("JOB STARTED...")
-spark.sql("DROP DATABASE IF EXISTS " + SALES_DB + " CASCADE")
-spark.sql("DROP DATABASE IF EXISTS " + FACTORY_DB + " CASCADE")
-spark.sql("DROP DATABASE IF EXISTS " + MARKETING_DB + " CASCADE")
+#spark.sql("DROP DATABASE IF EXISTS " + SALES_DB + " CASCADE")
+#spark.sql("DROP DATABASE IF EXISTS " + FACTORY_DB + " CASCADE")
+#spark.sql("DROP DATABASE IF EXISTS " + MARKETING_DB + " CASCADE")
 print("\tDROP DATABASE(S) COMPLETED")
 
 
@@ -108,9 +108,9 @@ print("\tDROP DATABASE(S) COMPLETED")
 ##---------------------------------------------------
 ##                 CREATE DATABASES
 ##---------------------------------------------------
-spark.sql("CREATE DATABASE " + SALES_DB)
-spark.sql("CREATE DATABASE " + FACTORY_DB)
-spark.sql("CREATE DATABASE " + MARKETING_DB)
+spark.sql("CREATE DATABASE IF NOT EXISTS " + SALES_DB)
+spark.sql("CREATE DATABASE IF NOT EXISTS " + FACTORY_DB)
+spark.sql("CREATE DATABASE IF NOT EXISTS " + MARKETING_DB)
 print("\tCREATE DATABASE(S) COMPLETED")
 
 
