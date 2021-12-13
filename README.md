@@ -43,6 +43,7 @@ PREFIX = 'user123'
 ```
 
 Create a CDE Airflow Job:
+- Type: Airflow
 - name it with suffix ```-airflow``` (for example ```user123-airflow```)
 - use application file ```dag.py```
 - __**IMPORTANT**__: instead of **Create and Run**, click the drop-down arrow and choose __**Create**__
